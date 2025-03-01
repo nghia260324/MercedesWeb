@@ -1,0 +1,81 @@
+.top__content-title {margin-top: 100px;}
+.main__content-left {width: 70%;}
+.main__content-right {width: 30%;}
+.item__car-cart {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--gray-9d9);
+}
+.remove__from-cart>i {opacity: 0;transition: all .8s;}
+.remove__from-cart {
+    position: absolute;
+    width: 0;
+    background-color: var(--red-500);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all .5s;
+    opacity: 0;
+    overflow: hidden;
+}
+.item__car-cart:hover .remove__from-cart {width: 60px;opacity: 1;}
+.item__car-cart:hover .remove__from-cart>i {opacity: 1;}
+.remove__from-cart>i {color: var(--white-fff);}
+.car__name {text-align: left;}
+.car__thumbnail {width: 240px;}
+.show__quantity {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--gray-9d9);
+    border-radius: 3px;
+    user-select: none;
+}
+.item__car-cart-quantity {
+    display: flex;
+    align-items: center;
+}
+.item__car-cart-quantity button {
+    width: 30px;
+    height: 30px;
+    background-color: var(--white-fff);
+    border: 1px solid var(--gray-9d9);
+    border-radius: 3px;
+    transition: all .3s;
+}
+.item__car-cart-quantity button:hover {
+    background-color: var(--black-333);
+    color: var(--white-fff);
+}
+.total__amount {
+    margin: 24px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main__content-right h3 {font-weight: 500;}
+.main__content-right h3 span {font-weight: 300;}
+.your__address {margin-top: 6px;}
+
+
+.btn__order {
+    font-weight: 600;
+    font-size: 16px;
+    margin: 24px 12px 0;
+    padding: 12px 24px;
+    background-color: var(--black-001);
+    border: 1px solid var(--gray-9d9);
+    transition: all .3s;
+}
+.btn__order:hover {
+    background-color: var(--black-333);
+    color: var(--white-fff);
+}

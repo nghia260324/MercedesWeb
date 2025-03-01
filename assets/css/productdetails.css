@@ -1,0 +1,215 @@
+:root {
+    --input-plaName: #d9d9d9;
+    --input-plaMail: #d9d9d9;
+    --input-plaPhone: #d9d9d9;
+}
+.top__content-title {margin-top: 100px;}
+.main__content-left {
+    padding-top: 48px;
+    width: 40%;
+}
+.main__content-right {width: 60%;}
+.show__img-car {
+    width: 100%;
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+}
+.list__img-car {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: max-content;
+    height: 100%;
+    display: flex;
+    transition: all .5s;
+}
+.item__img-car {width: calc(1200px/10 * 4 - 24px);}
+.item__img-car>img {width: 100%;}
+.list__select-img {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+.item__select-img {
+    padding: 6px;
+    width: 80px;
+    height: 80px;
+    background: var(--black-001);
+    border: 1px solid var(--gray-9d9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all .5s;
+}
+.list__select-img li.active {
+    background-color: var(--black-003);
+    border: 1px solid var(--black-006);
+    user-select: none;
+    cursor: default;
+}
+.item__select-img>img {width: 100%;}
+
+
+.features__title {
+    transition: all .3s;
+    padding: 0 12px;
+    font-size: 18px;
+    font-weight: 600;
+}
+.features__subTitle {font-size: 16px;padding: 0 12px;}
+.list__features {margin-top: 12px;}
+.item__features {
+    margin-top: 6px;
+    position: relative;
+    padding-left: 24px;
+}
+.item__features::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: var(--black-333);
+}
+
+.list__version {
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+}
+.item__version {
+    cursor: pointer;
+    font-size: 14px;
+    padding: 6px;
+    background-color: var(--black-001);
+    border: 1px solid var(--gray-9d9);
+    margin: 0 12px;
+    transition: all .5s;
+}
+
+.list__version li.active {
+    border: 1px solid var(--black-333);
+    background-color: var(--black-003);
+    cursor: default;
+    user-select: none;
+}
+
+.list__color {
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.item__color {cursor: pointer;width: 33.333333%;border: 1px solid var(--white-fff);transition: all .2s;}
+.item__color>img {
+    width: 227px;
+    height: 96px;
+    object-fit: cover;
+}
+.item__color:nth-child(4),
+.item__color:nth-child(5),
+.item__color:nth-child(6) {margin-top: 36px;}
+
+.list__color li.active {
+    background-color: var(--black-003);
+    border: 1px solid var(--black-333);
+    user-select: none;
+    cursor: default;
+}
+.technical__data-sheet {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    border: 1px solid var(--gray-9d9);
+    cursor: pointer;
+}
+.list__technical-data-sheet {
+    height: 0;
+    opacity: 0;
+    display: flex;
+    flex-wrap: wrap;
+    transition: all .5s;
+    overflow: hidden;
+}
+.item__technical-data-sheet {
+    padding: 6px;
+    width: 50%;
+    border-bottom: 1px solid var(--gray-9d9);
+}
+.item__technical-data-sheet:nth-child(2n) {text-align:  right;}
+.technical__data-sheet i {transition: all .5s;}
+
+
+.technical__data-sheet-active {
+    background-color: var(--black-001);
+    box-shadow: 0px -5px 10px rgb(0 0 0 / 10%);
+}
+
+.btn__add-to-cart {
+    display: block;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 24px 12px 0;
+    padding: 12px;
+    background-color: var(--black-001);
+    border: 1px solid var(--gray-9d9);
+    transition: all .3s;
+}
+.btn__add-to-cart:hover {
+    background-color: var(--black-333);
+    color: var(--white-fff);
+}
+
+.input__info {
+    position: relative;
+    font-size: 16px;
+    font-weight: 300;
+    width: 100%;
+    border: 1px solid var(--black-333);
+    padding: 12px;
+}
+.full__name::placeholder {
+    color: var(--input-plaName);
+}
+.e__mail::placeholder {
+    color: var(--input-plaMail);
+}
+.mobile__phone::placeholder {
+    color: var(--input-plaPhone);
+}
+.address::placeholder {
+    color: var(--input-plaPhone);
+}
+.input__info:focus {
+    outline: 0;
+}
+.w-input {
+    margin-left: 12px;
+    margin-top: 24px;
+    position: relative;
+}
+.w-input>h1 {
+    color: var(--red-500);
+}
+.w-input::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: red;
+    z-index: 100;
+    transition: all 1s;
+}
+.w-input:hover::before {
+    width: 100%;
+}
