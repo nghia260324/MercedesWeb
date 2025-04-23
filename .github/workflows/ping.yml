@@ -2,7 +2,8 @@ name: Ping Server
 
 on:
   schedule:
-    - cron: "*/1 * * * *"
+    - cron: "*/1 * * * *"  # Chạy mỗi 1 phút
+  workflow_dispatch:  # Cho phép chạy thủ công
 
 jobs:
   ping:
@@ -10,4 +11,5 @@ jobs:
     steps:
       - name: Ping Server
         run: |
+          echo "Pinging server"
           curl -s https://pharmapoly-server.onrender.com/keep-alive > /dev/null
